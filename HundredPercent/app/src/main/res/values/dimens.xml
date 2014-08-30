@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- header -->
+    <dimen name="header_title_font_size" >14dip</dimen>
+    <dimen name="header_height" >54dip</dimen>
+    <dimen name="header_btn_width" >70dip</dimen>
+    <dimen name="header_ibtn_width" >25dip</dimen>
+    <dimen name="header_ibtn_height" >25dip</dimen>
+
+    <!-- search header -->
+    <dimen name="search_button_size">23dip</dimen>
+    <dimen name="search_header_height">55dip</dimen>
+
+    <!-- homepage -->
+    <dimen name="middle_module">60dip</dimen>
+
+    <!-- footer -->
+    <dimen name="footer_height" >55dip</dimen>
+    <dimen name="personal_item_tip_width">80dip</dimen>
+    <!-- personal -->
+
+</resources>
