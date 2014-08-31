@@ -14,5 +14,6 @@
     <color name="footer_text_focus_color" >#ff3ec6ec</color>
     <color name="footer_text_color" >#ff1a1a1a</color>
 
-
+    <!-- common fragment -->
+    <color name="fragment_content_bg_color">#ffedf1f2</color>
 </resources>

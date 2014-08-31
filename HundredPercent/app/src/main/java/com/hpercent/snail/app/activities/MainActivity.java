@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.widget.Toast;
 
 import com.hpercent.snail.app.MainApplication;
@@ -102,6 +103,11 @@ public class MainActivity extends BaseFragmentActivity {
                 break;
         }
         ftTemp.commit();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
     }
 
     /**

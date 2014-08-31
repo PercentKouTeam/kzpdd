@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/fragment_content_bg_color"
     >
+    <include
+        layout="@layout/header_order"
+        android:layout_height="@dimen/header_height"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        />
 
 </RelativeLayout>

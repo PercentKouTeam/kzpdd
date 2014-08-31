@@ -19,4 +19,11 @@
     <dimen name="personal_item_tip_width">80dip</dimen>
     <!-- personal -->
 
+    <!-- order -->
+    <dimen name="order_header_title_size">18dip</dimen>
+    <dimen name="order_header_image_size">20dip</dimen>
+    <dimen name="order_header_image_margin">10dip</dimen>
+    <dimen name="order_header_title_max_width">120dip</dimen>
+    <!-- common -->
+    <dimen name="line_height">1px</dimen>
 </resources>
