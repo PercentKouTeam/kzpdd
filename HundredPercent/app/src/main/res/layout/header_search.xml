@@ -26,6 +26,7 @@
             android:layout_toRightOf="@+id/search_image"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
+            android:textSize="@dimen/search_header_font_size"
             android:text="搜索服务或商家"
             android:textColor="#B9B9B9"
             android:background="@null"

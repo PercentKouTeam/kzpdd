@@ -10,7 +10,7 @@
     <!-- search header -->
     <dimen name="search_button_size">23dip</dimen>
     <dimen name="search_header_height">55dip</dimen>
-
+    <dimen name="search_header_font_size">14dip</dimen>
     <!-- homepage -->
     <dimen name="middle_module">60dip</dimen>
 
