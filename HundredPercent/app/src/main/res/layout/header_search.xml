@@ -8,8 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/border"
-        android:layout_toLeftOf="@+id/fabu">
+        android:background="@drawable/border">
 
         <ImageView
             android:id="@+id/searchImage"
@@ -30,16 +29,8 @@
             android:textSize="@dimen/search_header_font_size"
             android:hint="搜索服务或商家"
             android:gravity="center_vertical"
-            android:textColor="#B9B9B9"
+            android:textColor="#BEBEBE"
             android:background="@null"
             android:layout_height="fill_parent" />
     </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/fabu"
-        android:layout_width="27dip"
-        android:layout_marginLeft="10dip"
-        android:src="@drawable/fabu"
-        android:layout_alignParentRight="true"
-        android:layout_height="40dip" />
 </RelativeLayout>

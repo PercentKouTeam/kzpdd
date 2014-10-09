@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F0ffffff"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="100dip"
+        android:layout_marginBottom="100dip">
+
+        <ListView
+            android:id="@+id/industryListView"
+            android:layout_above="@+id/dialogButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"></ListView>
+
+        <LinearLayout
+            android:id="@+id/dialogButtons"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dialog_industry_button"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dialog_industry_buttons_size">
+
+            <TextView
+                android:id="@+id/dialog_industry_cancel"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:textSize="@dimen/dialog_industry_buttons_font_size"
+                android:text="取消"
+                android:textColor="@color/dialog_industry_cancel"
+                android:gravity="center"
+                android:layout_height="fill_parent" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@color/homepage_line" />
+
+            <TextView
+                android:id="@+id/dialog_industry_confirm"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:textSize="@dimen/dialog_industry_buttons_font_size"
+                android:text="确定"
+                android:textColor="@color/dialog_industry_confirm"
+                android:gravity="center"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

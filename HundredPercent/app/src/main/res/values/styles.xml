@@ -5,6 +5,7 @@
     <!-- Customize your theme here. -->
     </style>
     <style name="Dialog_Fullscreen">
+        <item name="android:windowBackground">@color/half_transparent</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
     </style>

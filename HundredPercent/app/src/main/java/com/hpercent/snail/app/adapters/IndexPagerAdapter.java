@@ -7,7 +7,7 @@ import android.view.View;
 import java.util.List;
 
 /**
- * Created by lyihuang86 on 14-8-26.
+ * Created by lyihuang86 on 14-8-30.
  * templates of Adapter.
  */
 public class IndexPagerAdapter extends PagerAdapter {

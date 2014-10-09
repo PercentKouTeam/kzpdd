@@ -36,6 +36,7 @@
                 android:layout_height="@dimen/homepage_middle_module">
 
                 <RelativeLayout
+                    android:id="@+id/activityCenterLayout"
                     android:layout_width="0dip"
                     android:layout_weight="1"
                     android:background="@drawable/activity_center_button"
@@ -61,6 +62,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/newsCenterLayout"
                     android:layout_width="0dip"
                     android:layout_weight="1"
                     android:background="@drawable/news_button"
@@ -117,6 +119,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/changeIndustryLayout"
                     android:layout_width="0dip"
                     android:layout_weight="1"
                     android:background="#EDF1F2"
@@ -145,7 +148,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="1px"
-                android:background="#ffE0E3E3"/>
+                android:background="@color/homepage_line"/>
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/servicePager"

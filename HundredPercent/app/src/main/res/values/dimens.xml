@@ -7,6 +7,20 @@
     <dimen name="header_ibtn_width">25dip</dimen>
     <dimen name="header_ibtn_height">25dip</dimen>
 
+    <!-- activity_center -->
+    <dimen name="activity_center_header">55dip</dimen>
+    <dimen name="activity_center_header_font_size">18dip</dimen>
+
+    <!-- news_center -->
+    <dimen name="news_center_header">55dip</dimen>
+    <dimen name="news_center_header_font_size">23dip</dimen>
+    <dimen name="news_center_item_padding">10dip</dimen>
+    <dimen name="news_center_item_title_font_size">17dip</dimen>
+    <dimen name="news_center_item_content_font_size">15dip</dimen>
+    <dimen name="news_center_item_content_height">90dip</dimen>
+    <dimen name="news_center_item_img_width">160dip</dimen>
+    <dimen name="news_center_item_img_height">90dip</dimen>
+
     <!-- search header -->
     <dimen name="search_button_size">23dip</dimen>
     <dimen name="search_header_height">55dip</dimen>
@@ -26,6 +40,11 @@
     <!-- pager_view_service -->
     <dimen name="pager_view_service_star_size">18dip</dimen>
     <dimen name="pager_view_service_font_size">20dip</dimen>
+
+    <!-- dialog_industry -->
+    <dimen name="dialog_industry_buttons_size">60dip</dimen>
+    <dimen name="dialog_industry_buttons_font_size">24dip</dimen>
+
 
     <!-- footer -->
     <dimen name="footer_height">55dip</dimen>

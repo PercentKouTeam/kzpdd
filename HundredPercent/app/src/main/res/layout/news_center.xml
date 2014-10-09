@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/newsCenterHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_center_header"
+        android:background="@color/white"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/news_center_header_font_size"
+            android:text="新闻资讯"/>
+    </RelativeLayout>
+
+    <com.hpercent.snail.app.views.ViewPagerView
+        android:id="@+id/pagerViewNews"
+        android:layout_below="@+id/newsCenterHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="180dip"></com.hpercent.snail.app.views.ViewPagerView>
+
+
+    <ListView
+        android:id="@+id/newsListView"
+        android:layout_below="@+id/pagerViewNews"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"></ListView>
+</RelativeLayout>
