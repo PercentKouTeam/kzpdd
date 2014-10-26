@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/activityCenterHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_center_header"
+        android:background="@color/white"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="200dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:text="进行中"
+                android:gravity="center"
+                android:textSize="@dimen/activity_center_header_font_size"
+                android:textColor="@color/white"
+                android:background="#3EC6EC"
+                android:layout_height="fill_parent" />
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="#CCCCCC" />
+            <TextView
+                android:layout_width="0dip"
+                android:text="已结束"
+                android:gravity="center"
+                android:textSize="@dimen/activity_center_header_font_size"
+                android:textColor="#808080"
+                android:layout_weight="1"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/activityCenterHeader"
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#CCCCCC" />
+
+    <ListView
+        android:id="@+id/activityListView"
+        android:layout_below="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"></ListView>
+</RelativeLayout>

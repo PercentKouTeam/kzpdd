@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffEDF1F2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star6"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star7"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/star8"
+                android:layout_width="@dimen/pager_view_service_star_size"
+                android:layout_height="@dimen/pager_view_service_star_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_toRightOf="@+id/star8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="推荐服务 0.1"
+                android:textSize="@dimen/pager_view_service_font_size" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
