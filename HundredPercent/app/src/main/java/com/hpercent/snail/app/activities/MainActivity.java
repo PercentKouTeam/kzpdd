@@ -16,6 +16,7 @@ import com.hpercent.snail.app.fragments.MoreFragment;
 import com.hpercent.snail.app.fragments.OrderFragment;
 import com.hpercent.snail.app.fragments.PersonalFragment;
 import com.hpercent.snail.app.models.FooterDataModel;
+import com.umeng.update.UmengUpdateAgent;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -38,6 +39,8 @@ public class MainActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //友盟自动更新api
+        UmengUpdateAgent.update(this);
         setContentView(R.layout.activity_main);
 
         fm = getSupportFragmentManager();
