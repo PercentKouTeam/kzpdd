@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.hpercent.snail.app.R;
+import com.umeng.analytics.MobclickAgent;
 
 
 public class BaseActivity extends Activity {
@@ -19,15 +20,6 @@ public class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
     /**
      * 点击任意位置关闭软键盘
      */
@@ -75,5 +67,23 @@ public class BaseActivity extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
+    }
+
+    /**
+     * 友盟统计功能
+     * 开发文档：
+     * http://dev.umeng.com/analytics/android/quick-start
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+//        MobclickAgent.setSessionContinueMillis(30000);
     }
 }
