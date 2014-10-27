@@ -1,11 +1,11 @@
 <resources>
 
     <!-- header -->
-    <dimen name="header_title_font_size">14dip</dimen>
+    <dimen name="header_title_font_size">18dip</dimen>
     <dimen name="header_height">54dip</dimen>
     <dimen name="header_btn_width">70dip</dimen>
-    <dimen name="header_ibtn_width">25dip</dimen>
-    <dimen name="header_ibtn_height">25dip</dimen>
+    <dimen name="header_ibtn_width">12dip</dimen>
+    <dimen name="header_ibtn_height">20dip</dimen>
 
     <!-- activity_center -->
     <dimen name="activity_center_header">55dip</dimen>
@@ -58,4 +58,25 @@
     <dimen name="order_header_title_max_width">120dip</dimen>
     <!-- common -->
     <dimen name="line_height">1px</dimen>
+    <dimen name="input_height">50dip</dimen>
+    <dimen name="button_height">45dip</dimen>
+    <dimen name="input_text_size">16dip</dimen>
+    <dimen name="button_text_size">16dip</dimen>
+
+    <!-- dialog -->
+    <dimen name="alert_bt_height" >34dip</dimen>
+    <dimen name="alert_bt_width" >60dip</dimen>
+    <dimen name="alert_bt_font" >14dip</dimen>
+    <dimen name="alert_message_font" >15dip</dimen>
+    <dimen name="alert_message_width" >200dip</dimen>
+    <dimen name="alert_height" >200dip</dimen>
+    <dimen name="alert_width" >300dip</dimen>
+
+    <!-- registe -->
+    <dimen name="hint_height">30dip</dimen>
+    <dimen name="hint_size">14dip</dimen>
+    <dimen name="checkbox_size">20dip</dimen>
+
+    <dimen name="edit_margin">15dip</dimen>
+    <dimen name="registe_gap">15dip</dimen>
 </resources>

@@ -12,7 +12,7 @@ import com.hpercent.snail.app.models.UserModel;
 public class MainApplication extends Application {
     public static int CURRENT_FRAGMENT = 0;
     private static  MainApplication INSTANCE = null;
-
+    //用户信息
     public static UserModel gUser = new UserModel();
 
     @Override
@@ -37,10 +37,9 @@ public class MainApplication extends Application {
         gUser = user;
         // 同步存储本地
         SharedPreferences sp = MainApplication.getInstance().getSharedPreferences(Config.PREFS_NAME, 0);
-        sp.edit().putString("oid", user.getOpenid()).commit();
         sp.edit().putString("uid", user.getUid()).commit();
-        sp.edit().putString("nick", user.getNick()).commit();
-        sp.edit().putString("avatar", user.getAvatar()).commit();
+        sp.edit().putString("name", user.getUsername()).commit();
+        sp.edit().putString("phone", user.getPhone()).commit();
     }
 
     /**
@@ -50,13 +49,9 @@ public class MainApplication extends Application {
         gUser.clear();
         // 同步存储本地
         SharedPreferences sp = MainApplication.getInstance().getSharedPreferences(Config.PREFS_NAME, 0);
-        sp.edit().putString("oid", gUser.getOpenid()).commit();
         sp.edit().putString("uid", gUser.getUid()).commit();
-        sp.edit().putString("nick", gUser.getNick()).commit();
-        sp.edit().putString("avatar", gUser.getAvatar()).commit();
-        sp.edit().putString("history_counts", gUser.getHistoryCounts()).commit();
-        sp.edit().putString("favorite_counts", gUser.getFavoriteCounts()).commit();
-        sp.edit().putString("comments_counts", gUser.getCommentscounts()).commit();
+        sp.edit().putString("name", gUser.getUsername()).commit();
+        sp.edit().putString("phone", gUser.getPhone()).commit();
     }
 
     /**
@@ -64,14 +59,10 @@ public class MainApplication extends Application {
      */
     private void initUserInfo() {
         SharedPreferences sp = getSharedPreferences(Config.PREFS_NAME, 0);
-        String oid = sp.getString("oid", "");
         String uid = sp.getString("uid", "0");
-        String nick = sp.getString("nick", "");
-        String avatar = sp.getString("avatar", "");
+        String name = sp.getString("name", "");
+        String phone = sp.getString("phone", "");
 
-        String historyCounts = sp.getString("history_counts", "0");
-        String favoriteCounts = sp.getString("favorite_counts", "0");
-        String commentsCounts = sp.getString("comments_counts", "0");
-        this.gUser = new UserModel(oid, uid, nick, avatar, historyCounts, favoriteCounts, commentsCounts);
+        this.gUser = new UserModel(uid, name, phone);
     }
 }

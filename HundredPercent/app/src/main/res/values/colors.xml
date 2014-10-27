@@ -11,6 +11,7 @@
     <color name="transparent" >#00ffffff</color>
     <color name="half_transparent" >#998F9092</color>
 
+    <color name="backgroud_color">#fff2f6f7</color>
     <!-- homepage -->
     <color name="homepage_line">#ffE0E3E3</color>
     <color name="dialog_industry_cancel">#A0760A</color>
@@ -22,4 +23,10 @@
 
     <!-- common fragment -->
     <color name="fragment_content_bg_color">#ffedf1f2</color>
+    <color name="dialog_color">#ff2f3535</color>
+
+    <!-- registe -->
+    <color name="button_color">#ff3ec6ec</color>
+    <color name="button_color_selected">#ff0d9ac1</color>
+    <color name="hint_color">#ff3d3d3d</color>
 </resources>

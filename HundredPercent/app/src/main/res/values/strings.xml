@@ -11,4 +11,15 @@
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
 
+    <string name="phone_hint">请输入11位手机号码</string>
+    <string name="get_ecode">获取验证码</string>
+    <string name="agreement">我已阅读并同意《百分百用户协议》</string>
+
+    <string name="sms_send_hint">短信已经发送到%1$s,请稍等</string>
+    <string name="vcode_hint">请输入短信验证码</string>
+    <string name="password_hint">请输入6-20位密码</string>
+    <string name="realname_hint">请输入您的真实姓名</string>
+    <string name="idcard_hint">请输入您的身份证号码</string>
+    <string name="regist">注册</string>
+    <string name="resend">%1$ds后重新获取</string>
 </resources>
