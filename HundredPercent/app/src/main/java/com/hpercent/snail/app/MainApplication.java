@@ -63,4 +63,8 @@ public class MainApplication extends Application {
 
         this.gUser = new UserModel(uid, name, phone);
     }
+
+    public static boolean isLogin(){
+        return !"0".equals(gUser.getUid());
+    }
 }

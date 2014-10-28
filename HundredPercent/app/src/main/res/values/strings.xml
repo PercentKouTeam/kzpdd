@@ -32,4 +32,12 @@
     <string name="more_about_text">关于</string>
     <string name="more_mark_text">给我评分</string>
     <string name="more_recommend_text">推荐给好友</string>
+
+    <!-- personal -->
+    <string name="personal_title">我的百分百</string>
+    <string name="personal_publish_text">我的发布</string>
+    <string name="personal_favorite_text">我的收藏</string>
+    <string name="personal_complaint_text">我的投诉</string>
+    <string name="personal_contact_text">我的联系人</string>
+    <string name="personal_logout_text">退出账号</string>
 </resources>

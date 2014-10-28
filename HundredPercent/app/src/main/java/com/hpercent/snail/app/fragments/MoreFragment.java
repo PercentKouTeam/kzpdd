@@ -1,5 +1,7 @@
 package com.hpercent.snail.app.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
@@ -76,7 +78,10 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener{
 
         }
         else if(v == mBtMark){
-
+            Uri uri = Uri.parse("market://details?id=" + getActivity().getPackageName());
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
         else if(v == mBtRecommend){
 
