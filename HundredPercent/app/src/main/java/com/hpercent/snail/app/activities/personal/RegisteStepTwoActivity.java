@@ -174,7 +174,7 @@ public class RegisteStepTwoActivity extends BaseActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if(!"0".equals(MainApplication.gUser.getUid())){
+        if(MainApplication.isLogin()){
             finish();
         }
     }

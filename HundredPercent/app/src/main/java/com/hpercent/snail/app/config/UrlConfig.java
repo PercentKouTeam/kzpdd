@@ -29,4 +29,9 @@ public class UrlConfig {
      * 注册
      */
     public final static String USER_REGISTE = HOST + "accout/register";
+
+    /**
+     * 登录
+     */
+    public final static String USER_LOGIN = HOST + "account/login";
 }

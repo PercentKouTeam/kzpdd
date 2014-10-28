@@ -45,7 +45,6 @@ public class RegisteStepOneActivity extends BaseActivity {
         mEtPhone = (EditText) findViewById(R.id.phone);
         mBtSubmit = (TextView) findViewById(R.id.submit);
         mCbAgreement = (CusCheckBox) findViewById(R.id.checkbox);
-        mBtSubmit.setEnabled(canSubmit());
 
         mEtPhone.addTextChangedListener(new TextWatcher() {
             @Override
@@ -103,7 +102,8 @@ public class RegisteStepOneActivity extends BaseActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if(!"0".equals(MainApplication.gUser.getUid())){
+        mBtSubmit.setEnabled(canSubmit());
+        if(MainApplication.isLogin()){
             finish();
         }
     }

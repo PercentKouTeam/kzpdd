@@ -1,11 +1,15 @@
 package com.hpercent.snail.app.fragments;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.hpercent.snail.app.R;
 
 /**
  * Created by koudejian on 14-8-26.
@@ -45,4 +49,11 @@ public abstract class BaseFragment extends Fragment {
         }
         return view;
     }
+
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        ((Activity)mContext).overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+    }
+
 }
