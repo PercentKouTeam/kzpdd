@@ -79,4 +79,12 @@
 
     <dimen name="edit_margin">15dip</dimen>
     <dimen name="registe_gap">15dip</dimen>
+
+    <!-- more -->
+    <dimen name="more_icon_width">50dip</dimen>
+    <dimen name="more_icon_size">18dip</dimen>
+    <dimen name="more_arrow_width">12dip</dimen>
+    <dimen name="more_arrow_height">20dip</dimen>
+    <dimen name="more_arrow_margin_right">20dip</dimen>
+    <dimen name="more_item_text_size">18dip</dimen>
 </resources>
