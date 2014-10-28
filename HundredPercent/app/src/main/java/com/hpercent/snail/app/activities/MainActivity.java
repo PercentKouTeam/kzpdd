@@ -72,10 +72,10 @@ public class MainActivity extends BaseFragmentActivity {
     protected List<FooterDataModel> getItemPairs() {
         List<FooterDataModel> itemPairs = new ArrayList<FooterDataModel>();
         itemPairs.add(new FooterDataModel(R.drawable.foot_index_xml, R.drawable.footer_index_selected, "首页", false));
-        itemPairs.add(new FooterDataModel(R.drawable.foot_index_xml, R.drawable.footer_index_selected, "分类", false));
-        itemPairs.add(new FooterDataModel(R.drawable.foot_index_xml, R.drawable.footer_index_selected, "订单", false));
-        itemPairs.add(new FooterDataModel(R.drawable.foot_index_xml, R.drawable.footer_index_selected, "我的", false));
-        itemPairs.add(new FooterDataModel(R.drawable.foot_index_xml, R.drawable.footer_index_selected, "更多", false));
+        itemPairs.add(new FooterDataModel(R.drawable.foot_type_xml, R.drawable.footer_type_selected, "分类", false));
+        itemPairs.add(new FooterDataModel(R.drawable.foot_order_xml, R.drawable.footer_order_selected, "订单", false));
+        itemPairs.add(new FooterDataModel(R.drawable.foot_personal_xml, R.drawable.footer_personal_selected, "我的", false));
+        itemPairs.add(new FooterDataModel(R.drawable.foot_more_xml, R.drawable.footer_more_selected, "更多", false));
         return itemPairs;
     }
 
