@@ -122,5 +122,8 @@ public class LoginActivity extends BaseActivity {
     public void onResume() {
         super.onResume();
         mBtSubmit.setEnabled(canSubmit());
+        if(MainApplication.isLogin()){
+            finish();
+        }
     }
 }

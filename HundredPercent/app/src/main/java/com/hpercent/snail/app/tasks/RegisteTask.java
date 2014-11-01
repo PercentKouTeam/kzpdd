@@ -25,7 +25,7 @@ public class RegisteTask extends BaseTask{
         PostParameter param = new PostParameter();
         param.add("verify", vcode);
         param.add("passWord", passwd);
-        param.add("real_name", name);
+        param.add("realName", name);
         param.add("idCard", idcard);
         param.add("mobile", phone);
         mPostDataTask = new PostDataTask(UrlConfig.USER_REGISTE, param) {
