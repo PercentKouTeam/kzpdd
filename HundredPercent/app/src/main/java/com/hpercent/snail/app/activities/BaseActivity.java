@@ -15,6 +15,7 @@ import com.umeng.analytics.MobclickAgent;
 
 public class BaseActivity extends Activity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
