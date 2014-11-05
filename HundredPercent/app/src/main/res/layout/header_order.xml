@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@color/transparent"
-            android:text="订单订单订单订单"
+            android:text="全部"
             android:textSize="@dimen/order_header_title_size"
             android:singleLine="true"
             android:maxWidth="@dimen/order_header_title_max_width"
@@ -26,9 +26,9 @@
             />
         <ImageView
             android:id="@+id/header_image"
-            android:layout_width="@dimen/order_header_image_size"
-            android:layout_height="@dimen/order_header_image_size"
-            android:background="@drawable/favorite_selected"
+            android:layout_width="@dimen/order_header_image_witdh"
+            android:layout_height="@dimen/order_header_image_height"
+            android:background="@drawable/arrow_down"
             android:layout_toRightOf="@id/header_title"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/order_header_image_margin"

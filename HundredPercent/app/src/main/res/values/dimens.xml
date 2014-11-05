@@ -54,6 +54,8 @@
     <!-- order -->
     <dimen name="order_header_title_size">18dip</dimen>
     <dimen name="order_header_image_size">20dip</dimen>
+    <dimen name="order_header_image_witdh">20dip</dimen>
+    <dimen name="order_header_image_height">14dip</dimen>
     <dimen name="order_header_image_margin">10dip</dimen>
     <dimen name="order_header_title_max_width">120dip</dimen>
     <!-- common -->
@@ -94,4 +96,7 @@
     <!-- login -->
     <dimen name="login_hint_size">14dip</dimen>
     <dimen name="login_hint_width">100dip</dimen>
+    <!-- order -->
+    <dimen name="order_menu_text_size">14dip</dimen>
+
 </resources>

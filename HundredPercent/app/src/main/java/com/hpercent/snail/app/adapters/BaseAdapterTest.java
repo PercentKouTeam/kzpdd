@@ -13,11 +13,11 @@ import java.util.LinkedList;
  * Created by koudejian on 14-8-26.
  * templates of Adapter.
  */
-public class BaseAdapter extends android.widget.BaseAdapter {
+public class BaseAdapterTest extends android.widget.BaseAdapter {
     private Context mContext = null;
     private LayoutInflater mInflater;
     private LinkedList mList = null;
-    public BaseAdapter(Context context, LinkedList list ){
+    public BaseAdapterTest(Context context, LinkedList list){
         mContext = context;
         mList = list;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

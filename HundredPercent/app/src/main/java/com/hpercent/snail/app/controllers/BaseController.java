@@ -15,13 +15,7 @@ abstract public class BaseController {
     public BaseController(Context context, View view) {
         mContext = context;
         mView = view;
-        init();
     }
-
-    /**
-     * init view and base logic.
-     */
-    abstract void init();
 
     public View findViewById(int resId){
         return (mView == null) ? null : mView.findViewById(resId);

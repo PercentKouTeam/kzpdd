@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/input_height"
+    android:background="@drawable/selector_comment_btn_white"
+    >
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/input_height"
+        android:layout_marginLeft="30dip"
+        android:text="办理中"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/order_menu_text_size"
+        />
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/input_height"
+        android:gravity="center_vertical"
+        android:text="（12）"
+        android:textSize="@dimen/order_menu_text_size"
+        android:layout_toRightOf="@id/name"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true"
+        >
+    </RelativeLayout>
+</RelativeLayout>

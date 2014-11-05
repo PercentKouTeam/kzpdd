@@ -13,8 +13,15 @@ import com.hpercent.snail.app.fragments.CategoryFragment;
 import com.hpercent.snail.app.fragments.FooterFragment;
 import com.hpercent.snail.app.fragments.IndexFragment;
 import com.hpercent.snail.app.fragments.MoreFragment;
-import com.hpercent.snail.app.fragments.OrderFragment;
 import com.hpercent.snail.app.fragments.PersonalFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderCancelFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderDoneFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderHandingFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderRefundFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderWaitEvaluateFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderWaitHandFragment;
+import com.hpercent.snail.app.fragments.order.BaseOrderWaitPayFragment;
 import com.hpercent.snail.app.models.FooterDataModel;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -27,28 +34,48 @@ import java.util.List;
  */
 public class MainActivity extends BaseFragmentActivity {
 
+    public static final int ORDER_HANDING = 0;
+    public static final int ORDER_WAIT_HAND = 1;
+    public static final int ORDER_WAIT_PAY = 2;
+    public static final int ORDER_WAIT_EVALUATE = 3;
+    public static final int ORDER_DONE = 4;
+    public static final int ORDER_REFUND = 5;
+    public static final int ORDER_CANCEL = 6;
+
     private static android.support.v4.app.FragmentManager fm = null;
     private FooterFragment mFooterFragment = null;
 
     private IndexFragment mIndexFragment = null;
     private CategoryFragment mCategoryFragment = null;
-    private OrderFragment mOrderFragment = null;
     private PersonalFragment mPersonalFragment = null;
     private MoreFragment mMoreFragment = null;
+    private static MainActivity INSTANCE = null;
 
+    private List<BaseOrderFragment> mOrderFragmentList = new ArrayList<BaseOrderFragment>();
+
+    public static MainActivity getInstance(){
+        return INSTANCE;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //友盟自动更新api
         UmengUpdateAgent.update(this);
         setContentView(R.layout.activity_main);
-
+        INSTANCE = this;
         fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
+        mOrderFragmentList.add(new BaseOrderHandingFragment());
+        mOrderFragmentList.add(new BaseOrderWaitHandFragment());
+        mOrderFragmentList.add(new BaseOrderWaitPayFragment());
+        mOrderFragmentList.add(new BaseOrderWaitEvaluateFragment());
+        mOrderFragmentList.add(new BaseOrderDoneFragment());
+        mOrderFragmentList.add(new BaseOrderRefundFragment());
+        mOrderFragmentList.add(new BaseOrderCancelFragment());
+
         mIndexFragment = new IndexFragment();
         mCategoryFragment = new CategoryFragment();
-        mOrderFragment = new OrderFragment();
         mPersonalFragment = new PersonalFragment();
         mMoreFragment = new MoreFragment();
 
@@ -79,6 +106,16 @@ public class MainActivity extends BaseFragmentActivity {
         return itemPairs;
     }
 
+    public void switchOrder(int position){
+        if(MainApplication.gOrderType == position){
+            return;
+        }
+        MainApplication.gOrderType = position;
+        mFooterFragment.changeDisplayItem(3);
+        FragmentTransaction ftTemp = fm.beginTransaction();
+        ftTemp.replace(R.id.fragment_view, mOrderFragmentList.get(MainApplication.gOrderType));
+        ftTemp.commit();
+    }
     /**
      * 切换fragment
      * @param position
@@ -96,7 +133,7 @@ public class MainActivity extends BaseFragmentActivity {
                 ftTemp.replace(R.id.fragment_view, mCategoryFragment);
                 break;
             case 3:
-                ftTemp.replace(R.id.fragment_view, mOrderFragment);
+                ftTemp.replace(R.id.fragment_view, mOrderFragmentList.get(MainApplication.gOrderType));
                 break;
             case 4:
                 ftTemp.replace(R.id.fragment_view, mPersonalFragment);

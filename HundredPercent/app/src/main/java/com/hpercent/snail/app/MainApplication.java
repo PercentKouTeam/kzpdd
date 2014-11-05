@@ -15,6 +15,7 @@ public class MainApplication extends Application {
     //用户信息
     public static UserModel gUser = new UserModel();
 
+    public static int gOrderType = 0;
     @Override
     public void onCreate() {
         super.onCreate();

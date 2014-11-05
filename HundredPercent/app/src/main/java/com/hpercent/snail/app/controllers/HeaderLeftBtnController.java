@@ -17,10 +17,10 @@ public class HeaderLeftBtnController extends BaseController {
 
     public HeaderLeftBtnController(Context context, View view) {
         super(context, view);
+        init();
     }
 
-    @Override
-    void init() {
+    public void init() {
         mTvTitle = (TextView) findViewById(R.id.header_title);
         mBtBack = findViewById(R.id.return_btn_rl);
         mBtBack.setOnClickListener(new View.OnClickListener() {
