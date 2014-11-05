@@ -21,6 +21,11 @@ public class UrlConfig {
     public final static String GET_RECOMMEND = HOST + "index/getRecommend?limit = 100&cateId=";
 
     /**
+     * 获取行业分类信息
+     */
+    public final static String GET_CATEGORY = HOST + "index/getCategory";
+
+    /**
      * 注册获取验证码
      */
     public final static String GET_VCODE_FOR_REGISTE = HOST + "account/getVerifyForRegister";

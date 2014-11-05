@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.hpercent.snail.app.R;
 
 /**
- * Created by enterli on 2014/9/1.
+ * Created by lyihuang86 on 2014/9/1.
  */
 public class HeaderSearchController extends BaseController {
     private TextView mSearchView = null;

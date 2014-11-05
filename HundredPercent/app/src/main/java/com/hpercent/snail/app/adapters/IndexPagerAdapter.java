@@ -4,6 +4,7 @@ import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+
 import java.util.List;
 
 /**
@@ -33,7 +34,11 @@ public class IndexPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(View arg0, int arg1) {
-        ((ViewPager) arg0).addView(mListViews.get(arg1), 0);
+        try {
+            ((ViewPager) arg0).addView(mListViews.get(arg1), 0);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         return mListViews.get(arg1);
     }
 

@@ -1,9 +1,10 @@
-package com.hpercent.snail.app.activities;
+package com.hpercent.snail.app.activities.index;
 
 import android.os.Bundle;
 import android.widget.ListView;
 
 import com.hpercent.snail.app.R;
+import com.hpercent.snail.app.activities.BaseActivity;
 import com.hpercent.snail.app.adapters.ActivityCenterAdapter;
 
 import java.util.ArrayList;

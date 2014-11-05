@@ -26,7 +26,6 @@ public class IndustryAdapter extends android.widget.BaseAdapter {
         mContext = context;
         mList = list;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
     }
 
     @Override
@@ -44,22 +43,20 @@ public class IndustryAdapter extends android.widget.BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null) {
-            IndustryModel itemData = getItem(position);
-            if(itemData.type == 0){
-                convertView = mInflater.inflate(R.layout.industry_item_parent, null);
-            }else{
-                convertView = mInflater.inflate(R.layout.industry_item_child, null);
-            }
-            TextView mTextView = (TextView)convertView.findViewById(R.id.title);
-            //Log.v("ss", itemData.name);
-            mTextView.setText(itemData.name);
+        IndustryModel itemData = getItem(position);
+        if (itemData.type == 0) {
+            convertView = mInflater.inflate(R.layout.industry_item_parent, null);
+        } else {
+            convertView = mInflater.inflate(R.layout.industry_item_child, null);
         }
+        TextView mTextView = (TextView) convertView.findViewById(R.id.title);
+        //Log.v("ss", itemData.name);
+        mTextView.setText(itemData.name);
         return convertView;
     }
 }

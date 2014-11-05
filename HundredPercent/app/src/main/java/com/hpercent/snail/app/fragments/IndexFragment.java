@@ -2,36 +2,19 @@ package com.hpercent.snail.app.fragments;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.Volley;
 import com.hpercent.snail.app.R;
-import com.hpercent.snail.app.activities.ActivityCenterActivity;
-import com.hpercent.snail.app.activities.NewsCenterActivity;
+import com.hpercent.snail.app.activities.index.ActivityCenterActivity;
+import com.hpercent.snail.app.activities.index.NewsCenterActivity;
 import com.hpercent.snail.app.adapters.IndexPagerAdapter;
-import com.hpercent.snail.app.adapters.IndustryAdapter;
+import com.hpercent.snail.app.controllers.AdvertisementController;
+import com.hpercent.snail.app.controllers.IndustryController;
 import com.hpercent.snail.app.controllers.HeaderSearchController;
-import com.hpercent.snail.app.models.IndustryModel;
-import com.hpercent.snail.app.views.ViewPagerView;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Created by koudejian on 14-7-30.
@@ -39,6 +22,8 @@ import java.util.ListIterator;
 public class IndexFragment extends BaseFragment {
 
     private HeaderSearchController headerSearchController = null;
+    private IndustryController categoryController = null;
+    private AdvertisementController advertisementController = null;
     private android.support.v4.view.ViewPager adPager = null;
     private android.support.v4.view.ViewPager servicePager = null;
     private Dialog dialog = null;
@@ -58,13 +43,14 @@ public class IndexFragment extends BaseFragment {
         //头部搜索
         headerSearchController = new HeaderSearchController(this.mContext, this.mView);
         //广告
-        adPager = (android.support.v4.view.ViewPager) findViewById(R.id.adPager);
+        advertisementController = new AdvertisementController(this.mContext, this.mView);
         ArrayList listViews = new ArrayList<View>();
+        /*adPager = (android.support.v4.view.ViewPager) findViewById(R.id.adPager);
         listViews.add(mInflater.inflate(R.layout.pager_view_ad, null));
         listViews.add(mInflater.inflate(R.layout.pager_view_ad, null));
         listViews.add(mInflater.inflate(R.layout.pager_view_ad, null));
         adPager.setAdapter(new IndexPagerAdapter(listViews));
-        adPager.setCurrentItem(0);
+        adPager.setCurrentItem(0);*/
         //推荐服务
         servicePager = (android.support.v4.view.ViewPager) findViewById(R.id.servicePager);
         listViews = new ArrayList<View>();
@@ -86,29 +72,13 @@ public class IndexFragment extends BaseFragment {
         changeIndustry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dialog == null) {
-                    View view = mInflater.inflate(R.layout.dialog_industry, null);
-                    TextView cancel = (TextView) view.findViewById(R.id.dialog_industry_cancel);
-                    TextView confirm = (TextView) view.findViewById(R.id.dialog_industry_confirm);
-                    cancel.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog.hide();
-                        }
-                    });
-                    confirm.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog.hide();
-                        }
-                    });
-                    ListView listView = (ListView) view.findViewById(R.id.industryListView);
-                    listView.setAdapter(new IndustryAdapter(mContext, getData()));
-                    listView.setDividerHeight(0);
-                    dialog = new Dialog(mContext, R.style.Dialog_Fullscreen);
-                    dialog.setContentView(view);
+                if (categoryController == null) {
+                    Log.v("lyihuang86", "呵呵");
+                    categoryController = new IndustryController(mContext, v);
+                } else {
+                    Log.v("lyihuang86", "哈哈");
+                    categoryController.dialog.show();
                 }
-                dialog.show();
             }
         });
         //活动中心
@@ -131,39 +101,5 @@ public class IndexFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
-    }
-
-    /**
-     * 从接口中获取数据
-     *
-     * @return
-     */
-    private List getData() {
-        List<IndustryModel> mList = new ArrayList<IndustryModel>();
-        IndustryModel industryModel = new IndustryModel();
-        industryModel.type = 0;
-        industryModel.name = "计算机/互联网/通信/电子";
-        mList.add(industryModel);
-        industryModel = new IndustryModel();
-        industryModel.type = 1;
-        industryModel.name = "计算机软件";
-        mList.add(industryModel);
-        industryModel = new IndustryModel();
-        industryModel.type = 1;
-        industryModel.name = "计算机硬件";
-        mList.add(industryModel);
-        industryModel = new IndustryModel();
-        industryModel.type = 0;
-        industryModel.name = "会计/金融/银行/保险";
-        mList.add(industryModel);
-        industryModel = new IndustryModel();
-        industryModel.type = 1;
-        industryModel.name = "会计/审计";
-        mList.add(industryModel);
-        industryModel = new IndustryModel();
-        industryModel.type = 1;
-        industryModel.name = "金融/投资/证券";
-        mList.add(industryModel);
-        return mList;
     }
 }

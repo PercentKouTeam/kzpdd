@@ -9,6 +9,5 @@
         android:id="@+id/ad"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/adver"
         android:layout_gravity="center" />
 </LinearLayout>
