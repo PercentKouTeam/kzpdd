@@ -8,7 +8,7 @@ import com.hpercent.snail.app.activities.MainActivity;
 /**
  * Created by koudejian on 14-9-30.
  */
-public class BaseOrderWaitPayFragment extends BaseOrderFragment {
+public class OrderWaitPayFragment extends BaseOrderFragment {
 
     /**
      * load layout for different fragment.

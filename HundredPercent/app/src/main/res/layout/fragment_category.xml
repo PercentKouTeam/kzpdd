@@ -3,7 +3,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/backgroud_color"
     >
+    <include
+        android:id="@+id/header_search"
+        layout="@layout/header_search" />
+    <com.hpercent.snail.app.views.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header_search"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            >
+            <com.hpercent.snail.app.views.CusListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dip"
+                android:dividerHeight="0dip"
+                android:id="@+id/listview"
+                >
 
+            </com.hpercent.snail.app.views.CusListView>
+        </RelativeLayout>
+    </com.hpercent.snail.app.views.StretchScrollView>
 </RelativeLayout>

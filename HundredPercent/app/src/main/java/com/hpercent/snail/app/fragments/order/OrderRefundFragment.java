@@ -8,7 +8,7 @@ import com.hpercent.snail.app.activities.MainActivity;
 /**
  * Created by koudejian on 14-9-30.
  */
-public class BaseOrderCancelFragment extends BaseOrderFragment {
+public class OrderRefundFragment extends BaseOrderFragment {
 
     /**
      * load layout for different fragment.
@@ -16,11 +16,12 @@ public class BaseOrderCancelFragment extends BaseOrderFragment {
      */
     @Override
     public View setLayout() {
-        return mInflater.inflate(R.layout.fragment_order_cancel, mContainer, false);
+        return mInflater.inflate(R.layout.fragment_order_refund, mContainer, false);
     }
+
 
     @Override
     public void initView() {
-        mOrderTypeController.changeItem(MainActivity.ORDER_CANCEL);
+        mOrderTypeController.changeItem(MainActivity.ORDER_REFUND);
     }
 }

@@ -126,4 +126,10 @@ public class LoginActivity extends BaseActivity {
             finish();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        MainApplication.STACK_FRAGMENT = MainApplication.CURRENT_FRAGMENT;
+    }
 }

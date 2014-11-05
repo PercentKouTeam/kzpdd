@@ -8,7 +8,7 @@ import com.hpercent.snail.app.activities.MainActivity;
 /**
  * Created by koudejian on 14-9-30.
  */
-public class BaseOrderWaitEvaluateFragment extends BaseOrderFragment {
+public class OrderCancelFragment extends BaseOrderFragment {
 
     /**
      * load layout for different fragment.
@@ -16,12 +16,11 @@ public class BaseOrderWaitEvaluateFragment extends BaseOrderFragment {
      */
     @Override
     public View setLayout() {
-        return mInflater.inflate(R.layout.fragment_order_evaluate, mContainer, false);
+        return mInflater.inflate(R.layout.fragment_order_cancel, mContainer, false);
     }
 
     @Override
     public void initView() {
-        mOrderTypeController.changeItem(MainActivity.ORDER_WAIT_EVALUATE);
+        mOrderTypeController.changeItem(MainActivity.ORDER_CANCEL);
     }
-
 }

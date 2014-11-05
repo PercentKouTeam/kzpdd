@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hpercent.snail.app.MainApplication;
 import com.hpercent.snail.app.R;
 
 /**
@@ -26,6 +27,7 @@ public class HeaderLeftBtnController extends BaseController {
         mBtBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MainApplication.STACK_FRAGMENT = MainApplication.CURRENT_FRAGMENT;
                 ((Activity)mContext).finish();
             }
         });

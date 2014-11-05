@@ -11,17 +11,18 @@
         android:layout_height="match_parent"
         android:background="@color/transparent" >
         <RelativeLayout
-            android:id="@+id/fragment_view"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
-        </RelativeLayout>
-        <RelativeLayout
             android:id="@+id/fragment_radiogroup"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/footer_height"
             android:gravity="center_vertical"
             android:layout_alignParentBottom="true"
+            >
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/fragment_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/fragment_radiogroup"
             >
         </RelativeLayout>
     </RelativeLayout>

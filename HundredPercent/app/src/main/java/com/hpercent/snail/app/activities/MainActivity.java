@@ -14,14 +14,14 @@ import com.hpercent.snail.app.fragments.FooterFragment;
 import com.hpercent.snail.app.fragments.IndexFragment;
 import com.hpercent.snail.app.fragments.MoreFragment;
 import com.hpercent.snail.app.fragments.PersonalFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderCancelFragment;
 import com.hpercent.snail.app.fragments.order.BaseOrderDoneFragment;
 import com.hpercent.snail.app.fragments.order.BaseOrderFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderHandingFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderRefundFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderWaitEvaluateFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderWaitHandFragment;
-import com.hpercent.snail.app.fragments.order.BaseOrderWaitPayFragment;
+import com.hpercent.snail.app.fragments.order.OrderCancelFragment;
+import com.hpercent.snail.app.fragments.order.OrderHandingFragment;
+import com.hpercent.snail.app.fragments.order.OrderRefundFragment;
+import com.hpercent.snail.app.fragments.order.OrderWaitEvaluateFragment;
+import com.hpercent.snail.app.fragments.order.OrderWaitHandFragment;
+import com.hpercent.snail.app.fragments.order.OrderWaitPayFragment;
 import com.hpercent.snail.app.models.FooterDataModel;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -66,13 +66,13 @@ public class MainActivity extends BaseFragmentActivity {
         fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        mOrderFragmentList.add(new BaseOrderHandingFragment());
-        mOrderFragmentList.add(new BaseOrderWaitHandFragment());
-        mOrderFragmentList.add(new BaseOrderWaitPayFragment());
-        mOrderFragmentList.add(new BaseOrderWaitEvaluateFragment());
+        mOrderFragmentList.add(new OrderHandingFragment());
+        mOrderFragmentList.add(new OrderWaitHandFragment());
+        mOrderFragmentList.add(new OrderWaitPayFragment());
+        mOrderFragmentList.add(new OrderWaitEvaluateFragment());
         mOrderFragmentList.add(new BaseOrderDoneFragment());
-        mOrderFragmentList.add(new BaseOrderRefundFragment());
-        mOrderFragmentList.add(new BaseOrderCancelFragment());
+        mOrderFragmentList.add(new OrderRefundFragment());
+        mOrderFragmentList.add(new OrderCancelFragment());
 
         mIndexFragment = new IndexFragment();
         mCategoryFragment = new CategoryFragment();
@@ -122,9 +122,17 @@ public class MainActivity extends BaseFragmentActivity {
      */
     @Override
     public void onFooterClick(int position) {
+        /*
+        if(position == 3 && !MainApplication.isLogin()){//订单未登录
+            startActivity(new Intent(this, LoginActivity.class));
+            MainApplication.STACK_FRAGMENT = position;
+            return;
+        }
+        //*/
         mFooterFragment.changeDisplayItem(position);
         FragmentTransaction ftTemp = fm.beginTransaction();
         MainApplication.CURRENT_FRAGMENT = position;
+        MainApplication.STACK_FRAGMENT = position;
         switch (position) {
             case 1:
                 ftTemp.replace(R.id.fragment_view, mIndexFragment);
@@ -143,6 +151,14 @@ public class MainActivity extends BaseFragmentActivity {
                 break;
         }
         ftTemp.commit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(MainApplication.STACK_FRAGMENT > 0) {
+            onFooterClick(MainApplication.STACK_FRAGMENT);
+        }
     }
 
     @Override

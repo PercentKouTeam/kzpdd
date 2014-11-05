@@ -11,6 +11,7 @@ import com.hpercent.snail.app.models.UserModel;
  */
 public class MainApplication extends Application {
     public static int CURRENT_FRAGMENT = 0;
+    public static int STACK_FRAGMENT = 0;
     private static  MainApplication INSTANCE = null;
     //用户信息
     public static UserModel gUser = new UserModel();

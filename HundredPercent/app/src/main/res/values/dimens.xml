@@ -98,5 +98,18 @@
     <dimen name="login_hint_width">100dip</dimen>
     <!-- order -->
     <dimen name="order_menu_text_size">14dip</dimen>
+    <dimen name="order_margin_top">12dip</dimen>
+    <dimen name="order_item_margin_left">12dip</dimen>
+    <dimen name="order_item_margin_top">12dip</dimen>
+    <dimen name="order_item_gap">12dip</dimen>
+    <dimen name="order_item_image_size">75dip</dimen>
+    <dimen name="order_item_progress_bar_height">20dip</dimen>
+    <dimen name="order_item_button_height">45dip</dimen>
+    <dimen name="order_item_title_font_size">18dip</dimen>
+    <dimen name="order_item_title_height">30dip</dimen>
+    <dimen name="order_item_font_size">14dip</dimen>
+    <dimen name="order_item_text_height">20dip</dimen>
+    <dimen name="order_button_text_size">16dip</dimen>
+    <dimen name="order_button_gap">6dip</dimen>
 
 </resources>

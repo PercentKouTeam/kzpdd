@@ -4,7 +4,7 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tests"
+    android:background="@color/backgroud_color"
     >
     <!-- @color/fragment_content_bg_color -->
     <include
@@ -14,7 +14,15 @@
         android:layout_width="match_parent"
         android:layout_alignParentTop="true"
         />
-
+    <com.hpercent.snail.app.views.swipe.SwipeMenuListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_listview"
+        android:layout_below="@id/header"
+        android:dividerHeight="@dimen/order_item_margin_top"
+        android:divider="@color/transparent"
+        >
+    </com.hpercent.snail.app.views.swipe.SwipeMenuListView>
 
     <include
         layout="@layout/layout_menu"

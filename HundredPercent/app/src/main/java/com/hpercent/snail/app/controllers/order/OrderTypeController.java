@@ -6,7 +6,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.hpercent.snail.app.R;
-import com.hpercent.snail.app.activities.MainActivity;
 import com.hpercent.snail.app.adapters.OrderTypeAdapter;
 import com.hpercent.snail.app.controllers.BaseController;
 import com.hpercent.snail.app.controllers.HeaderOrderController;
@@ -74,7 +73,9 @@ public class OrderTypeController extends BaseController {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 changeItem(position);
-                MainActivity.getInstance().switchOrder(position);
+//                MainActivity.getInstance().switchOrder(position);
+
+
 //                if(mOnItemSelectedListener != null){
 //                    mOnItemSelectedListener.onSelected(position);
 //                }

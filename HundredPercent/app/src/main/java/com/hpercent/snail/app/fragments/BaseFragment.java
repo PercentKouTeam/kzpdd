@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.hpercent.snail.app.R;
 
@@ -56,4 +57,11 @@ public abstract class BaseFragment extends Fragment {
         ((Activity)mContext).overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
     }
 
+    /**
+     * 弹出提示消息框
+     * @param msg
+     */
+    public void popMessage(String msg){
+        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+    }
 }

@@ -9,6 +9,9 @@
     <color name="blue">#ff0000ff</color>
     <color name="transparent_black">#77000000</color>
 
+    <color name="orange">#fff3a779</color>
+    <color name="orange_selected">#ffec7f62</color>
+
     <color name="transparent" >#00ffffff</color>
     <color name="half_transparent" >#998F9092</color>
 
@@ -32,4 +35,8 @@
     <color name="hint_color">#ff3d3d3d</color>
 
     <color name="personal_logout_color">#ffec7f62</color>
+    <!-- order -->
+    <color name="order_progress">#fff4d352</color>
+
+
 </resources>
